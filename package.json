@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@gemwallet/api": "^3.6.0",
     "@mui/icons-material": "^5.15.9",
     "@mui/material": "^5.15.9",
     "@testing-library/jest-dom": "^5.17.0",
@@ -14,7 +15,6 @@
     "@types/node": "^16.18.80",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
-    "node-sass": "^9.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.1.0",
@@ -22,8 +22,10 @@
     "react-router-dom": "^6.22.0",
     "react-scripts": "^3.0.1",
     "redux-thunk": "^3.1.0",
+    "sass": "^1.70.0",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4",
+    "web3": "^4.4.0",
     "xrpl": "^3.0.0"
   },
   "scripts": {
