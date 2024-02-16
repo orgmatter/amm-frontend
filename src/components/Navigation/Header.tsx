@@ -12,7 +12,6 @@ type HeaderCompProps = {
     handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     handleHideWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     userWalletAddress: string|undefined
-    isGemWalletInstalled: boolean
 }
 
 export default function HeaderComponent(props: HeaderCompProps) {
@@ -21,8 +20,7 @@ export default function HeaderComponent(props: HeaderCompProps) {
         isWalletListShow, 
         handleHideWalletList, 
         handleShowWalletList,
-        userWalletAddress,
-        isGemWalletInstalled
+        userWalletAddress
     } = props;
     
     return (

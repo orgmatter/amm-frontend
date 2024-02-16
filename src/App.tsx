@@ -4,7 +4,8 @@ import { Routes as ROUTES } from './Routes';
 import HeaderComponent from './components/Navigation/Header';
 import FooterComponent from './components/Navigation/Footer';
 import WalletList from './components/WalletList';
-import { isConnected, isInstalled, getAddress }from "@gemwallet/api";
+import { useWallets } from './useHooks/useWallets';
+// import { isConnected, isInstalled, getAddress }from "@gemwallet/api";
 import "../src/sass/app.scss";
 
 function App() {
@@ -12,6 +13,8 @@ function App() {
   const [isWalletListShow, setIsWalletListShow] = useState(false);
   const [isGemWalletInstalled, setIsGemWalletInstalled] = useState(false);
   const [userWalletAddress, setUserWalletAddress] = useState<string|undefined>("Connect wallet");
+
+  const { GEM_WALLET, CROSSMARK_WALLET } = useWallets();
 
   // handle connect wallet btn here
   const handleShowWalletList = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -25,19 +28,31 @@ function App() {
   const handleGemWalletClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    isInstalled().then((installedResp) => {
+    GEM_WALLET?.isInstalled().then((installedResp) => {
         if(installedResp.result.isInstalled) {
 
           // get wallet address
-          getAddress().then((addrResp) => {
+          GEM_WALLET?.getAddress().then((addrResp) => {
 
             // set the user wallet address here
             setUserWalletAddress(addrResp.result?.address);
           })
         }
-        setIsGemWalletInstalled(true);
+        // setIsGemWalletInstalled(true);
         setIsWalletListShow(false);
     })
+  }
+
+  // handle connect Crossmark here
+  const handleCrossmarkWalletClick = async (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
+
+    let signIn = await CROSSMARK_WALLET?.signInAndWait();
+
+    if(signIn?.response.data.address !== "") {
+      setUserWalletAddress(signIn?.response.data.address);
+      setIsWalletListShow(false);
+    }
   }
   
   return (
@@ -49,13 +64,15 @@ function App() {
             handleShowWalletList={handleShowWalletList}
             handleHideWalletList={handleHideWalletList}
             userWalletAddress={userWalletAddress}
-            isGemWalletInstalled={isGemWalletInstalled}
           />
         </div>
         <div className="app-body" style={{paddingTop: "100px"}}>
           {
             isWalletListShow ? 
-            <WalletList handleGemWalletClick={handleGemWalletClick} />:
+            <WalletList 
+              handleGemWalletClick={handleGemWalletClick}
+              handleCrossmarkWalletClick={handleCrossmarkWalletClick}
+            />:
             <Router>
               <Routes>
                 {
