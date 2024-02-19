@@ -12,6 +12,7 @@ type HeaderCompProps = {
     handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     handleHideWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     userWalletAddress: string|undefined
+    isGemWalletInstalled: boolean
 }
 
 export default function HeaderComponent(props: HeaderCompProps) {
@@ -20,7 +21,8 @@ export default function HeaderComponent(props: HeaderCompProps) {
         isWalletListShow, 
         handleHideWalletList, 
         handleShowWalletList,
-        userWalletAddress
+        userWalletAddress,
+        isGemWalletInstalled
     } = props;
     
     return (
@@ -41,10 +43,31 @@ export default function HeaderComponent(props: HeaderCompProps) {
                                 {
                                     !isWalletListShow && 
                                     <div className="toolbar-menu-cover-flex">
-                                        <div className="toolbar-menu-cover-item"></div>
-                                        <div className="toolbar-menu-cover-item"></div>
-                                        <div className="toolbar-menu-cover-item"></div>
-                                        <div className="toolbar-menu-cover-item"></div>
+                                        <div className="toolbar-menu-cover-item">
+                                            <a className="menu-link" href="/">
+                                                <GridViewIcon className="menu-link-icon" /> &nbsp; Home
+                                            </a>
+                                        </div>
+                                        <div className="toolbar-menu-cover-item">
+                                            <a className="menu-link" href="/swap">
+                                                <Rotate90DegreesCcwIcon className="menu-link-icon" /> &nbsp; Swap
+                                            </a>
+                                        </div>
+                                        <div className="toolbar-menu-cover-item">
+                                            <a className="menu-link" href="/liquidity">
+                                                <CleanHandsIcon className="menu-link-icon" /> &nbsp; Liquidity
+                                            </a>
+                                        </div>
+                                        <div className="toolbar-menu-cover-item">
+                                            <a className="menu-link" href="/voting">
+                                                <CleanHandsIcon className="menu-link-icon" /> &nbsp; Voting
+                                            </a>
+                                        </div>
+                                        <div className="toolbar-menu-cover-item">
+                                            <a className="menu-link" href="/">
+                                                 More
+                                            </a>
+                                        </div>
                                     </div>
                                 }
                                 {
@@ -64,7 +87,7 @@ export default function HeaderComponent(props: HeaderCompProps) {
                                                 variant="contained"
                                                 onClick={handleShowWalletList}
                                             >
-                                                <WalletIcon className="wallet-icon" /> {userWalletAddress}
+                                                <WalletIcon className="wallet-icon" /> <div className="addr-cover"> {userWalletAddress}</div>
                                             </Button>
                                         </div>
                                     }

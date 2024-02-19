@@ -3,12 +3,12 @@ import { Button } from "@mui/material";
 
 type WalletListCompProps = {
     handleGemWalletClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
-    handleCrossmarkWalletClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
+    // handleCrossmarkWalletClick: (e: React.MouseEvent<HTMLButtonElement>) => void;
 }
 
 export default function WalletListComponent(props: WalletListCompProps) {
 
-    const { handleGemWalletClick, handleCrossmarkWalletClick } = props;
+    const { handleGemWalletClick } = props;
 
     return (
         <div className="wallet-list-cover-flex">
@@ -24,13 +24,13 @@ export default function WalletListComponent(props: WalletListCompProps) {
                         </Button>
                     </div>
                     <div className="list-cover-item">
-                        <Button
+                        {/* <Button
                             className="wallet-btn"
                             variant="contained"
                             onClick={handleCrossmarkWalletClick}
                         >
                             Crossmark
-                        </Button>
+                        </Button> */}
                     </div>
                 </div>
             </div>
