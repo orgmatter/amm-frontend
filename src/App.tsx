@@ -6,6 +6,7 @@ import FooterComponent from './components/Navigation/Footer';
 import WalletList from './components/WalletList';
 import { useWallets } from './useHooks/useWallets';
 import "../src/sass/app.scss";
+import { GetAddressResponse, IsInstalledResponse } from '@gemwallet/api';
 
 function App() {
 
@@ -27,11 +28,11 @@ function App() {
   const handleGemWalletClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
 
-    GEM_WALLET?.isInstalled().then((installedResp) => {
+    GEM_WALLET?.isInstalled().then((installedResp: IsInstalledResponse) => {
         if(installedResp.result.isInstalled) {
 
           // get wallet address
-          GEM_WALLET?.getAddress().then((addrResp) => {
+          GEM_WALLET?.getAddress().then((addrResp: GetAddressResponse) => {
 
             // set the user wallet address here
             setUserWalletAddress(addrResp.result?.address);
