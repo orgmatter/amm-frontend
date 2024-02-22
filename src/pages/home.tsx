@@ -4,11 +4,12 @@ import HomeComponent from "../components/Home";
 type HomePageProps = {
     handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     userWalletAddress: string
+    isGemWalletInstalled: boolean
 }
 
 export default function HomePage(props: HomePageProps) {
 
-    const { handleShowWalletList, userWalletAddress } = props;
+    const { handleShowWalletList, userWalletAddress, isGemWalletInstalled } = props;
 
     return (
         <div className="home-page-cover-flex">
@@ -16,6 +17,7 @@ export default function HomePage(props: HomePageProps) {
                 <HomeComponent 
                     handleShowWalletList={handleShowWalletList}
                     userWalletAddress={userWalletAddress}
+                    isGemWalletInstalled={isGemWalletInstalled}
                 />
             </div>
         </div>

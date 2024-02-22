@@ -1,16 +1,28 @@
 import React from "react";
-import { Button } from "@mui/material";
-import { Refresh as RefreshIcon, SwapCalls as SwapCallsIcon, Wallet as WalletIcon } from "@mui/icons-material";
+import { Button, IconButton } from "@mui/material";
+import { 
+    Refresh as RefreshIcon, 
+    SwapCalls as SwapCallsIcon, 
+    Wallet as WalletIcon,
+    Logout as LogoutIcon,
+    FolderCopy as FolderCopyIcon,
+    Launch as LaunchIcon
+} from "@mui/icons-material";
 
 
 type HomeCompProps = {
     handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     userWalletAddress: string
+    isGemWalletInstalled: boolean
 }
 
 export default function HomeComponent(props: HomeCompProps) {
 
-    const { handleShowWalletList, userWalletAddress } = props;
+    const { 
+        handleShowWalletList, 
+        userWalletAddress, 
+        isGemWalletInstalled 
+    } = props;
     
     return (
         <div className="home-comp-cover-flex">
@@ -26,7 +38,7 @@ export default function HomeComponent(props: HomeCompProps) {
                                                     <Button
                                                         className="connect-btn"
                                                         variant="contained"
-                                                        onClick={handleShowWalletList}
+                                                        onClick={!isGemWalletInstalled? handleShowWalletList:() => false}
                                                     >
                                                         <WalletIcon className="wallet-icon" /> <div className="addr-cover"> {userWalletAddress}</div>
                                                     </Button>
@@ -34,7 +46,26 @@ export default function HomeComponent(props: HomeCompProps) {
                                             </div>
                                         </div>
                                         <div className="section1-cover-item">
-                                            <RefreshIcon className="swap-icon" />
+                                            {
+                                                isGemWalletInstalled &&
+                                                <div className="connect-opt-cover-flex">
+                                                    <div className="connect-opt-cover-item">
+                                                        <IconButton>
+                                                            <FolderCopyIcon className="copy-icon" />
+                                                        </IconButton>
+                                                    </div>
+                                                    <div className="connect-opt-cover-item">
+                                                        <IconButton>
+                                                            <LaunchIcon className="copy-icon" />
+                                                        </IconButton>
+                                                    </div>
+                                                    <div className="connect-opt-cover-item">
+                                                        <IconButton onClick={() => window.location.assign("/")}>
+                                                            <LogoutIcon className="copy-icon" />
+                                                        </IconButton>
+                                                    </div>
+                                                </div>
+                                            }
                                         </div>
                                     </div>
                                 </div>

@@ -86,7 +86,7 @@ export default function HeaderComponent(props: HeaderCompProps) {
                                             <Button
                                                 className="connect-btn"
                                                 variant="contained"
-                                                onClick={handleShowWalletList}
+                                                onClick={!isGemWalletInstalled? handleShowWalletList:() => false}
                                             >
                                                 <WalletIcon className="wallet-icon" /> <div className="addr-cover"> {userWalletAddress}</div>
                                             </Button>

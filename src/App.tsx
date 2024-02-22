@@ -36,9 +36,9 @@ function App() {
 
             // set the user wallet address here
             setUserWalletAddress(addrResp.result?.address);
+            setIsGemWalletInstalled(true);
           })
         }
-        setIsGemWalletInstalled(true);
         setIsWalletListShow(false);
     })
   }
@@ -80,7 +80,15 @@ function App() {
                 {
                   ROUTES.map((route, index) => {
                     if(route.name === "Home") {
-                      return <Route path={route.url} element={<route.component handleShowWalletList={handleShowWalletList} userWalletAddress={userWalletAddress} />} />
+                      return <Route 
+                                path={route.url} 
+                                element={
+                                <route.component 
+                                  handleShowWalletList={handleShowWalletList} 
+                                  userWalletAddress={userWalletAddress}
+                                  isGemWalletInstalled={isGemWalletInstalled}
+                                />} 
+                              />
                     }
                     <Route path={route.url} element={<route.component />} />
                   })

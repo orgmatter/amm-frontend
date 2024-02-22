@@ -291,16 +291,11 @@
                                                                 .connect-btn {
                                                                     width: 100%;
                                                                     height: 30px;
-                                                                    background-color: rgba(50, 50, 50, 0.4);
+                                                                    background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
                                                                     text-transform: none;
                                                                     border-radius: 10px;
                                                                     transition: 0.2s ease-in all;
-                                                                    color: #fff;
-
-                                                                    &:hover {
-                                                                        background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
-                                                                        color: #000 !important;
-                                                                    }
+                                                                    color: #000;
             
                                                                     .addr-cover {
                                                                         font-size: 0.7rem;
@@ -319,11 +314,22 @@
                                                         }
                                                     }
                                                     &:last-child {
-                                                        text-align: right;
-                                                        color: #fff;
+                                                        display: flex;
+                                                        justify-content: flex-end;
 
-                                                        .swap-icon {
-                                                            font-size: 1.2rem;
+                                                        .connect-opt-cover-flex {
+                                                            width: 58%;
+                                                            display: flex;
+                                                            justify-content: space-between;
+
+                                                            .connect-opt-cover-item {
+                                                                width: calc(100/3);
+
+                                                                .copy-icon {
+                                                                    font-size: 1.13rem;
+                                                                    color: rgba(245, 245, 245, 0.7);
+                                                                }
+                                                            }
                                                         }
                                                     }
                                                 }
