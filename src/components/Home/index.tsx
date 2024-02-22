@@ -1,8 +1,16 @@
 import React from "react";
 import { Button } from "@mui/material";
-import { Refresh as RefreshIcon } from "@mui/icons-material";
+import { Refresh as RefreshIcon, SwapCalls as SwapCallsIcon, Wallet as WalletIcon } from "@mui/icons-material";
 
-export default function HomeComponent() {
+
+type HomeCompProps = {
+    handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
+    userWalletAddress: string
+}
+
+export default function HomeComponent(props: HomeCompProps) {
+
+    const { handleShowWalletList, userWalletAddress } = props;
     
     return (
         <div className="home-comp-cover-flex">
@@ -12,7 +20,19 @@ export default function HomeComponent() {
                             <div className="swap-form-cover-flex">
                                 <div className="swap-form-cover-item">
                                     <div className="section1-cover-flex">
-                                        <div className="section1-cover-item">Swap</div>
+                                        <div className="section1-cover-item">
+                                            <div className="connect-btn-cover-flex">
+                                                <div className="connect-btn-cover-item">
+                                                    <Button
+                                                        className="connect-btn"
+                                                        variant="contained"
+                                                        onClick={handleShowWalletList}
+                                                    >
+                                                        <WalletIcon className="wallet-icon" /> <div className="addr-cover"> {userWalletAddress}</div>
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div className="section1-cover-item">
                                             <RefreshIcon className="swap-icon" />
                                         </div>
@@ -22,6 +42,9 @@ export default function HomeComponent() {
                                     <div className="section2-cover-flex">
                                         <div className="section2-cover-item">XRP</div>
                                         <div className="section2-cover-item">0</div>
+                                    </div>
+                                    <div className="swap-icon-cover">
+                                        <SwapCallsIcon className="swap-icon" />
                                     </div>
                                 </div>
                                 <div className="swap-form-cover-item">

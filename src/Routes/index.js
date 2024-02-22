@@ -8,7 +8,7 @@ export const Routes = [
     {
         name: "Home",
         url: "/",
-        component: () => <HomePage />
+        component: (props) => <HomePage {...props} />
     },
     {
         name: "Liquidity",

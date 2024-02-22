@@ -5,6 +5,7 @@ import {
     GridView as GridViewIcon,
     Rotate90DegreesCcw as Rotate90DegreesCcwIcon,
     CleanHands as CleanHandsIcon,
+    Close as CloseIcon
 } from "@mui/icons-material";
 
 type HeaderCompProps = {
@@ -100,7 +101,7 @@ export default function HeaderComponent(props: HeaderCompProps) {
                                                 variant="contained"
                                                 onClick={handleHideWalletList}
                                             >
-                                                x
+                                                <CloseIcon className="close-icon" />
                                             </Button>
                                         </div>
                                     }

@@ -62,19 +62,23 @@
                                             justify-content: center;
     
                                             .toolbar-menu-cover-flex {
-                                                width: 80%;
+                                                width: 90%;
                                                 display: flex;
                                                 justify-content: space-between;
     
                                                 .toolbar-menu-cover-item {
-                                                    width: 20%;
+                                                    width: 17%;
                                                     display: flex;
                                                     align-items: center;
                                                     border-radius: 8px;
+                                                    background: transparent;
                                                     transition: 0.2s ease-in all;
 
                                                     &:hover {
-                                                        background-color: rgba(50, 50, 50, 0.8);
+                                                        // background-color: rgba(50, 50, 50, 0.8);
+                                                        // background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                                        box-shadow: 0 0 18px #49e048;
+                                                        color: #000 !important;
                                                     }
                                                     
                                                     .menu-link {
@@ -84,6 +88,7 @@
                                                         text-decoration: none;
                                                         display: inline-block;
                                                         width: 100%;
+                                                        height: 100%;
                                                         display: flex;
                                                         justify-content: center;
                                                         align-items: center;
@@ -143,11 +148,14 @@
                                                         width: 20%;
                                                         min-width: 40px !important;
                                                         background-color: rgba(50, 50, 50, 0.4);
-                                                        font-size: 0.8rem;
-                                                        color: #fff;
-                                                        text-transform: capitalize;
                                                         padding-left: 2px;
                                                         padding-right: 2px;
+
+                                                        .close-icon {
+                                                            font-size: 0.8rem;
+                                                            color: #fff;
+                                                            text-transform: none;
+                                                        }
                                                     }
                                                 }
                                             }
@@ -164,6 +172,65 @@
 
                 .body-offset-div {
                     height: 50px;
+                }
+
+                .wallet-list-cover-flex {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .wallet-list-cover-item {
+                        width: 20%;
+                        height: 400px;
+
+                        .wallet-header-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .wallet-header-cover-item {
+                                width: 100%;
+
+                                .header-title {
+                                    font-size: 1rem;
+                                    color: #fff;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .list-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding-top: 10px;
+
+                            .list-cover-item {
+                                width: 100%;
+                                margin-top: 10px;
+
+                                .wallet-btn {
+                                    width: 100%;
+                                    height: 40px;
+                                    background-color: rgba(50, 50, 50, 0.4);
+                                    border-radius: 10px;
+                                    text-transform: none;
+                                    font-weight: 400;
+                                    border: none;
+                                    justify-content: flex-start;
+                                    transition: 0.2s ease-in all;
+
+                                    &:hover {
+                                        border: 1px solid #49e048;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
 
                 .home-comp-cover-flex {
@@ -183,7 +250,13 @@
                             .swap-intro-cover-item {
                                 width: 450px;
                                 border: 1px solid rgba(50, 50, 50, 0.8);
-                                border-radius: 10px;
+                                border-radius: 15px;
+                                transition: 0.2s ease-in all;
+
+                                &:hover {
+                                    border: 1px solid #49e048;
+                                    cursor: pointer;
+                                }
 
                                 .swap-form-cover-flex {
                                     width: 100%;
@@ -200,15 +273,53 @@
                                                 width: 90%;
                                                 display: flex;
                                                 justify-content: space-between;
-                                                padding-top: 15px;
+                                                align-items: center;
 
                                                 .section1-cover-item {
+                                                    width: 50%;
                                                     
                                                     &:first-child {
-                                                        font-size: 1rem;
-                                                        color: #fff;
+
+                                                        .connect-btn-cover-flex {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: flex-start;
+
+                                                            .connect-btn-cover-item {
+                                                                width: 60%;
+
+                                                                .connect-btn {
+                                                                    width: 100%;
+                                                                    height: 30px;
+                                                                    background-color: rgba(50, 50, 50, 0.4);
+                                                                    text-transform: none;
+                                                                    border-radius: 10px;
+                                                                    transition: 0.2s ease-in all;
+                                                                    color: #fff;
+
+                                                                    &:hover {
+                                                                        background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                                                        color: #000 !important;
+                                                                    }
+            
+                                                                    .addr-cover {
+                                                                        font-size: 0.7rem;
+                                                                        padding-left: 5px;
+                                                                        padding-right: 5px;
+                                                                        white-space: nowrap;
+                                                                        overflow: hidden;
+                                                                        text-overflow: ellipsis !important;
+                                                                    }
+                
+                                                                    .wallet-icon {
+                                                                        font-size: 1rem;
+                                                                    } 
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                     &:last-child {
+                                                        text-align: right;
                                                         color: #fff;
 
                                                         .swap-icon {
@@ -223,12 +334,33 @@
                                             border-bottom: 1px solid rgba(50, 50, 50, 0.8);
                                             display: flex;
                                             justify-content: center;
+                                            position: relative;
+
+                                            .swap-icon-cover {
+                                                position: absolute;
+                                                left: 45%;
+                                                bottom: -15px;
+                                                width: 35px;
+                                                height: 35px;
+                                                border: 1px solid rgba(50, 50, 50, 0.8);
+                                                border-radius: 5px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                background: rgba(5, 10, 10, 8);
+                                                // box-shadow: 0 0 8px #49e048;
+
+                                                .swap-icon {
+                                                    font-size: 1.3rem;
+                                                    color: #fff;
+                                                }
+                                            }
 
                                             .section2-cover-flex {
                                                 width: 90%;
                                                 display: flex;
                                                 justify-content: space-between;
-                                                padding-top: 15px;
+                                                align-items: center;
 
                                                 .section2-cover-item {
                                                     
@@ -252,7 +384,7 @@
                                                 width: 90%;
                                                 display: flex;
                                                 justify-content: space-between;
-                                                padding-top: 15px;
+                                                align-items: center;
 
                                                 .section3-cover-item {
                                                     
@@ -307,15 +439,21 @@
                                     padding-top: 15px;
 
                                     .footer-btn-cover-item {
-                                        width: 30%;
+                                        width: 45%;
 
                                         .footer-btn {
                                             width: 100%;
-                                            height: 42px;
+                                            height: 45px;
                                             text-transform: none;
-                                            background: #fa9f78;
+                                            // background: #fa9f78;
+                                            background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
                                             border-radius: 10px;
                                             color: #000;
+                                            transition: 0.2s ease-in all;
+
+                                            &:hover {
+                                                box-shadow: 0 0 12px #49e048;
+                                            }
                                         }
                                     }
                                 }

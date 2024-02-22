@@ -8,11 +8,16 @@ type WalletListCompProps = {
 
 export default function WalletListComponent(props: WalletListCompProps) {
 
-    const { handleGemWalletClick } = props;
-
+    const { handleGemWalletClick,  } = props;
+    
     return (
         <div className="wallet-list-cover-flex">
             <div className="wallet-list-cover-item">
+                <div className="wallet-header-cover-flex">
+                    <div className="wallet-header-cover-item">
+                        <h2 className="header-title">Connect wallet</h2>
+                    </div>
+                </div>
                 <div className="list-cover-flex">
                     <div className="list-cover-item">
                         <Button
@@ -24,13 +29,13 @@ export default function WalletListComponent(props: WalletListCompProps) {
                         </Button>
                     </div>
                     <div className="list-cover-item">
-                        {/* <Button
+                        <Button
                             className="wallet-btn"
                             variant="contained"
-                            onClick={handleCrossmarkWalletClick}
+                            // onClick={handleCrossmarkWalletClick}
                         >
                             Crossmark
-                        </Button> */}
+                        </Button>
                     </div>
                 </div>
             </div>

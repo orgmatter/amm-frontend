@@ -14,7 +14,7 @@ function App() {
   const [isGemWalletInstalled, setIsGemWalletInstalled] = useState(false);
   const [userWalletAddress, setUserWalletAddress] = useState<string|undefined>("Connect wallet");
 
-  const { GEM_WALLET } = useWallets();
+  const { GEM_WALLET, } = useWallets();
 
   // handle connect wallet btn here
   const handleShowWalletList = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -78,7 +78,12 @@ function App() {
             <Router>
               <Routes>
                 {
-                  ROUTES.map((route, index) => <Route path={route.url} element={<route.component />} />)
+                  ROUTES.map((route, index) => {
+                    if(route.name === "Home") {
+                      return <Route path={route.url} element={<route.component handleShowWalletList={handleShowWalletList} userWalletAddress={userWalletAddress} />} />
+                    }
+                    <Route path={route.url} element={<route.component />} />
+                  })
                 }
               </Routes>
             </Router>
