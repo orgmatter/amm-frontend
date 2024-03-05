@@ -13,7 +13,7 @@ import {
 type HomeCompProps = {
     handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     userWalletAddress: string
-    isGemWalletInstalled: boolean
+    isWalletInstalled: boolean
 }
 
 export default function HomeComponent(props: HomeCompProps) {
@@ -21,7 +21,7 @@ export default function HomeComponent(props: HomeCompProps) {
     const { 
         handleShowWalletList, 
         userWalletAddress, 
-        isGemWalletInstalled 
+        isWalletInstalled 
     } = props;
     
     return (
@@ -38,7 +38,7 @@ export default function HomeComponent(props: HomeCompProps) {
                                                     <Button
                                                         className="connect-btn"
                                                         variant="contained"
-                                                        onClick={!isGemWalletInstalled? handleShowWalletList:() => false}
+                                                        onClick={!isWalletInstalled? handleShowWalletList:() => false}
                                                     >
                                                         <WalletIcon className="wallet-icon" /> <div className="addr-cover"> {userWalletAddress}</div>
                                                     </Button>
@@ -47,7 +47,7 @@ export default function HomeComponent(props: HomeCompProps) {
                                         </div>
                                         <div className="section1-cover-item">
                                             {
-                                                isGemWalletInstalled &&
+                                                isWalletInstalled &&
                                                 <div className="connect-opt-cover-flex">
                                                     <div className="connect-opt-cover-item">
                                                         <IconButton>

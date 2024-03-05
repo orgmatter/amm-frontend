@@ -13,7 +13,7 @@ type HeaderCompProps = {
     handleShowWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     handleHideWalletList: (e: React.MouseEvent<HTMLButtonElement>) => void
     userWalletAddress: string|undefined
-    isGemWalletInstalled: boolean
+    isWalletInstalled: boolean
 }
 
 export default function HeaderComponent(props: HeaderCompProps) {
@@ -23,7 +23,7 @@ export default function HeaderComponent(props: HeaderCompProps) {
         handleHideWalletList, 
         handleShowWalletList,
         userWalletAddress,
-        isGemWalletInstalled
+        isWalletInstalled
     } = props;
     
     return (
@@ -86,7 +86,7 @@ export default function HeaderComponent(props: HeaderCompProps) {
                                             <Button
                                                 className="connect-btn"
                                                 variant="contained"
-                                                onClick={!isGemWalletInstalled? handleShowWalletList:() => false}
+                                                onClick={!isWalletInstalled? handleShowWalletList:() => false}
                                             >
                                                 <WalletIcon className="wallet-icon" /> <div className="addr-cover"> {userWalletAddress}</div>
                                             </Button>

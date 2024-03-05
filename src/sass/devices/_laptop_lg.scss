@@ -125,7 +125,6 @@
                                                         .addr-cover {
                                                             font-size: 0.7rem;
                                                             color: #fff;
-                                                            // text-transform: capitalize;
                                                             padding-left: 5px;
                                                             padding-right: 5px;
                                                             white-space: nowrap;
@@ -328,6 +327,11 @@
                                                                 .copy-icon {
                                                                     font-size: 1.13rem;
                                                                     color: rgba(245, 245, 245, 0.7);
+                                                                    transition: 0.2s ease-in all;
+
+                                                                    &:hover {
+                                                                        color: #49e048;
+                                                                    }
                                                                 }
                                                             }
                                                         }

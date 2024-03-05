@@ -6,13 +6,13 @@ type CrossmarkSdk = typeof sdk
 
 type WalletProps = {
     GEM_WALLET?: typeof import ("@gemwallet/api")
-    // CROSSMARK_WALLET?: CrossmarkSdk
+    CROSSMARK_WALLET?: CrossmarkSdk
 }
-// const CROSSMARK_WALLET: CrossmarkSdk = sdk;
+const CROSSMARK_WALLET: CrossmarkSdk = sdk;
 
 export const useWallets = (): WalletProps => {
     return {
         GEM_WALLET,
-        // CROSSMARK_WALLET
+        CROSSMARK_WALLET
     }
 }
