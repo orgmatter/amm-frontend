@@ -1,0 +1,477 @@
+@media only screen and (min-width: 1465.20px) and (max-width: 1599px) {
+
+    body {
+        margin: 0px;
+    }
+    
+    .app-cover-flex {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    
+        .app-cover-item {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(5, 10, 10, 8);
+            border: 1px solid red;
+    
+            .app-header-cover {
+                width: 100%;
+    
+                .header-comp-cover-flex {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+    
+                    .header-comp-cover-item {
+                        width: 100%;
+    
+                        .appbar-cover {
+                            width: 100%;
+                            background-color: #060606;
+                            border-bottom: 1px solid rgba(50, 50, 50, 8);
+    
+                            .toolbar-cover {
+                                min-height: 45px;
+    
+                                .toolbar-cover-flex {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: space-between;
+    
+                                    .toolbar-cover-item {
+                                        
+                                        &:first-child {
+                                            width: 30%;
+                                            display: flex;
+                                            align-items: center;
+    
+                                            .app-logo-cover-flex {
+                                                width: 100%;
+                                                display: flex;
+                                                align-items: center;
+    
+                                                .app-logo-cover-item {
+                                                    font-weight: 600;
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            width: 40%;
+                                            display: flex;
+                                            justify-content: center;
+    
+                                            .toolbar-menu-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+    
+                                                .toolbar-menu-cover-item {
+                                                    width: 17%;
+                                                    display: flex;
+                                                    align-items: center;
+                                                    border-radius: 8px;
+                                                    background: transparent;
+                                                    transition: 0.2s ease-in all;
+
+                                                    &:hover {
+                                                        // background-color: rgba(50, 50, 50, 0.8);
+                                                        // background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                                        box-shadow: 0 0 18px #49e048;
+                                                        color: #000 !important;
+                                                    }
+                                                    
+                                                    .menu-link {
+                                                        font-size: 0.7rem;
+                                                        color: #fff;
+                                                        text-align: center;
+                                                        text-decoration: none;
+                                                        display: inline-block;
+                                                        width: 100%;
+                                                        height: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+
+                                                        .menu-link-icon {
+                                                            font-size: 0.75rem;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                            .toolbar-no-menu {
+    
+                                            }
+                                        }
+                                        &:last-child {
+                                            width: 33%;
+                                            display: flex;
+                                            justify-content: flex-end;
+    
+                                            .connect-btn-cover-flex {
+                                                width: 100%;
+                                                display: flex;
+                                                justify-content: flex-end;
+    
+                                                .connect-btn-cover-item {
+                                                    width: 30%;
+    
+                                                    .connect-btn {
+                                                        width: 100%;
+                                                        height: 30px;
+                                                        background-color: rgba(50, 50, 50, 0.4);
+                                                        text-transform: none;
+
+                                                        .addr-cover {
+                                                            font-size: 0.7rem;
+                                                            color: #fff;
+                                                            padding-left: 5px;
+                                                            padding-right: 5px;
+                                                            white-space: nowrap;
+                                                            overflow: hidden;
+                                                            text-overflow: ellipsis !important;
+                                                        }
+    
+                                                        .wallet-icon {
+                                                            font-size: 1rem;
+                                                            color: #fff;
+                                                        } 
+                                                    }
+                                                }
+                                                .close-btn-cover-item {
+                                                    width: 30%;
+                                                    display: flex;
+                                                    justify-content: flex-end;
+    
+                                                    .connect-btn {
+                                                        width: 20%;
+                                                        min-width: 40px !important;
+                                                        background-color: rgba(50, 50, 50, 0.4);
+                                                        padding-left: 2px;
+                                                        padding-right: 2px;
+
+                                                        .close-icon {
+                                                            font-size: 0.8rem;
+                                                            color: #fff;
+                                                            text-transform: none;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .app-body {
+                width: 100%;
+
+                .body-offset-div {
+                    height: 50px;
+                }
+
+                .wallet-list-cover-flex {
+                    width: 100%;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    .wallet-list-cover-item {
+                        width: 20%;
+                        height: 400px;
+
+                        .wallet-header-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .wallet-header-cover-item {
+                                width: 100%;
+
+                                .header-title {
+                                    font-size: 1rem;
+                                    color: #fff;
+                                    font-weight: 400;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .list-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            padding-top: 10px;
+
+                            .list-cover-item {
+                                width: 100%;
+                                margin-top: 10px;
+
+                                .wallet-btn {
+                                    width: 100%;
+                                    height: 40px;
+                                    background-color: rgba(50, 50, 50, 0.4);
+                                    border-radius: 10px;
+                                    text-transform: none;
+                                    font-weight: 400;
+                                    border: none;
+                                    justify-content: flex-start;
+                                    transition: 0.2s ease-in all;
+
+                                    &:hover {
+                                        border: 1px solid #49e048;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .home-comp-cover-flex {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .home-comp-cover-item {
+                        width: 100%;
+                        padding-top: 100px;                        
+
+                        .swap-intro-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .swap-intro-cover-item {
+                                width: 450px;
+                                border: 1px solid rgba(50, 50, 50, 0.8);
+                                border-radius: 15px;
+                                transition: 0.2s ease-in all;
+
+                                &:hover {
+                                    border: 1px solid #49e048;
+                                    cursor: pointer;
+                                }
+
+                                .swap-form-cover-flex {
+                                    width: 100%;
+
+                                    .swap-form-cover-item {
+
+                                        &:first-child {
+                                            height: 100px;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .section1-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section1-cover-item {
+                                                    width: 50%;
+                                                    
+                                                    &:first-child {
+
+                                                        .connect-btn-cover-flex {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: flex-start;
+
+                                                            .connect-btn-cover-item {
+                                                                width: 60%;
+
+                                                                .connect-btn {
+                                                                    width: 100%;
+                                                                    height: 30px;
+                                                                    background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                                                    text-transform: none;
+                                                                    border-radius: 10px;
+                                                                    transition: 0.2s ease-in all;
+                                                                    color: #000;
+            
+                                                                    .addr-cover {
+                                                                        font-size: 0.7rem;
+                                                                        padding-left: 5px;
+                                                                        padding-right: 5px;
+                                                                        white-space: nowrap;
+                                                                        overflow: hidden;
+                                                                        text-overflow: ellipsis !important;
+                                                                    }
+                
+                                                                    .wallet-icon {
+                                                                        font-size: 1rem;
+                                                                    } 
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &:last-child {
+                                                        display: flex;
+                                                        justify-content: flex-end;
+
+                                                        .connect-opt-cover-flex {
+                                                            width: 58%;
+                                                            display: flex;
+                                                            justify-content: space-between;
+
+                                                            .connect-opt-cover-item {
+                                                                width: calc(100/3);
+
+                                                                .copy-icon {
+                                                                    font-size: 1.13rem;
+                                                                    color: rgba(245, 245, 245, 0.7);
+                                                                    transition: 0.2s ease-in all;
+
+                                                                    &:hover {
+                                                                        color: #49e048;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            height: 150px;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+                                            display: flex;
+                                            justify-content: center;
+                                            position: relative;
+
+                                            .swap-icon-cover {
+                                                position: absolute;
+                                                left: 45%;
+                                                bottom: -15px;
+                                                width: 35px;
+                                                height: 35px;
+                                                border: 1px solid rgba(50, 50, 50, 0.8);
+                                                border-radius: 5px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                background: rgba(5, 10, 10, 8);
+                                                // box-shadow: 0 0 8px #49e048;
+
+                                                .swap-icon {
+                                                    font-size: 1.3rem;
+                                                    color: #fff;
+                                                }
+                                            }
+
+                                            .section2-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section2-cover-item {
+                                                    
+                                                    &:first-child {
+                                                        font-size: 1rem;
+                                                        color: #fff;
+                                                    }
+                                                    &:last-child {
+                                                        font-size: 1rem;
+                                                        color: #fff;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:last-child {
+                                            height: 100px;
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .section3-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section3-cover-item {
+                                                    
+                                                    &:first-child {
+                                                        font-size: 1rem;
+                                                        color: #fff;
+                                                    }
+                                                    &:last-child {
+                                                        font-size: 1rem;
+                                                        color: #fff;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .swap-intro-footer-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .swap-intro-footer-cover-item {
+                                width: 650px;
+
+                                .footer-text-cover {
+                                    width: 100%;
+                                    padding-top: 25px;
+
+                                    .footer-title {
+                                        font-size: 3.2rem;
+                                        color: #fff;
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin-block-start: 0.3rem;
+                                        margin-block-end: 0.3rem;
+                                    }
+                                    .footer-subtitle {
+                                        font-size: 1rem;
+                                        color: rgba(245, 245, 245, 0.7);
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin-block-start: 0.8rem;
+                                        margin-block-end: 0.3rem;
+                                    }
+                                }
+                                .footer-btn-cover-flex {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    padding-top: 15px;
+
+                                    .footer-btn-cover-item {
+                                        width: 45%;
+
+                                        .footer-btn {
+                                            width: 100%;
+                                            height: 45px;
+                                            text-transform: none;
+                                            // background: #fa9f78;
+                                            background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                            border-radius: 10px;
+                                            color: #000;
+                                            transition: 0.2s ease-in all;
+
+                                            &:hover {
+                                                box-shadow: 0 0 12px #49e048;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
