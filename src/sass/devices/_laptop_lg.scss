@@ -375,12 +375,45 @@
                                                 .section2-cover-item {
                                                     
                                                     &:first-child {
+                                                        width: 30%;
                                                         font-size: 1rem;
                                                         color: #fff;
+                                                        display: flex;
+                                                        justify-content: flex-start;
+
+                                                        .currency-logo-cover-flex {
+                                                            width: 40%;
+                                                            display: flex;
+                                                            justify-content: space-between;
+                                                            align-items: center;
+
+                                                            .currency-logo-cover-item {
+                                                                width: 45%;
+
+                                                                &:first-child {
+
+                                                                    .logo {
+                                                                        width: 100%;
+                                                                    }
+                                                                }
+                                                                &:last-child {
+
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                     &:last-child {
-                                                        font-size: 1rem;
+                                                        font-size: 1.25rem;
                                                         color: #fff;
+                                                        text-align: right;
+
+                                                        .crypto-value-p {
+                                                            margin-block-end: 0.3rem;
+                                                        }
+                                                        .dollar-value-p {
+                                                            font-size: 0.8rem;
+                                                            color: rgba(150, 150, 150, 0.8);
+                                                        }
                                                     }
                                                 }
                                             }

@@ -1,0 +1,1 @@
+export const CURRENCY_API_KEY = "cur_live_3wp4uJ1Le155rsVhHlXNTJmBjYDbZmqNKF1p5shy";

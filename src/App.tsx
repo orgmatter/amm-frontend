@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import { Routes as ROUTES } from './Routes';
 import HeaderComponent from './components/Navigation/Header';
@@ -7,6 +7,8 @@ import WalletList from './components/WalletList';
 import { useWallets } from './useHooks/useWallets';
 import "../src/sass/app.scss";
 import { GetAddressResponse, IsInstalledResponse } from '@gemwallet/api';
+import store from './store';
+import { Provider } from 'react-redux';
 
 function App() {
 
@@ -55,54 +57,61 @@ function App() {
       setIsWalletListShow(false);
     }
   }
+
+  useEffect(() => {
+
+    
+  }, [])
   
   return (
-    <div className="app-cover-flex">
-      <div className="app-cover-item">
-        <div className="app-header-cover">
-          <HeaderComponent
-            isWalletListShow={isWalletListShow}
-            handleShowWalletList={handleShowWalletList}
-            handleHideWalletList={handleHideWalletList}
-            userWalletAddress={userWalletAddress}
-            isWalletInstalled={isWalletInstalled}
-          />
-        </div>
-        <div className="app-body">
-          <div className="body-offset-div"></div>
-          {
-            isWalletListShow ? 
-            <WalletList 
-              handleGemWalletClick={handleGemWalletClick}
-              handleCrossmarkWalletClick={handleCrossmarkWalletClick}
-            />:
-            <Router>
-              <Routes>
-                {
-                  ROUTES.map((route, index) => {
-                    if(route.name === "Home") {
-                      return <Route 
-                                path={route.url} 
-                                element={
-                                <route.component 
-                                  handleShowWalletList={handleShowWalletList} 
-                                  userWalletAddress={userWalletAddress}
-                                  isWalletInstalled={isWalletInstalled}
-                                />} 
-                              />
-                    }
-                    <Route path={route.url} element={<route.component />} />
-                  })
-                }
-              </Routes>
-            </Router>
-          }
-        </div>
-        <div className="app-footer-cover">
-          <FooterComponent />
+    <Provider store={store}>
+      <div className="app-cover-flex">
+        <div className="app-cover-item">
+          <div className="app-header-cover">
+            <HeaderComponent
+              isWalletListShow={isWalletListShow}
+              handleShowWalletList={handleShowWalletList}
+              handleHideWalletList={handleHideWalletList}
+              userWalletAddress={userWalletAddress}
+              isWalletInstalled={isWalletInstalled}
+            />
+          </div>
+          <div className="app-body">
+            <div className="body-offset-div"></div>
+            {
+              isWalletListShow ? 
+              <WalletList 
+                handleGemWalletClick={handleGemWalletClick}
+                handleCrossmarkWalletClick={handleCrossmarkWalletClick}
+              />:
+              <Router>
+                <Routes>
+                  {
+                    ROUTES.map((route, index) => {
+                      if(route.name === "Home") {
+                        return <Route 
+                                  path={route.url} 
+                                  element={
+                                  <route.component 
+                                    handleShowWalletList={handleShowWalletList} 
+                                    userWalletAddress={userWalletAddress}
+                                    isWalletInstalled={isWalletInstalled}
+                                  />} 
+                                />
+                      }
+                      <Route path={route.url} element={<route.component />} />
+                    })
+                  }
+                </Routes>
+              </Router>
+            }
+          </div>
+          <div className="app-footer-cover">
+            <FooterComponent />
+          </div>
         </div>
       </div>
-    </div>
+    </Provider>
   );
 }
 
