@@ -99,7 +99,7 @@ function App() {
                                   />} 
                                 />
                       }
-                      <Route path={route.url} element={<route.component />} />
+                      return <Route path={route.url} element={<route.component />} />
                     })
                   }
                 </Routes>

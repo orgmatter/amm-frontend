@@ -11,9 +11,9 @@
     
         .app-cover-item {
             width: 100%;
-            height: 100vh;
             background-color: rgba(5, 10, 10, 8);
             border: 1px solid red;
+            padding-bottom: 100px;
     
             .app-header-cover {
                 width: 100%;
@@ -232,6 +232,7 @@
                     }
                 }
 
+                // Home component styles
                 .home-comp-cover-flex {
                     width: 100%;
                     display: flex;
@@ -245,6 +246,10 @@
                             width: 100%;
                             display: flex;
                             justify-content: center;
+
+                            .swap-link-a {
+                                text-decoration: none;
+                            }
 
                             .swap-intro-cover-item {
                                 width: 450px;
@@ -438,6 +443,785 @@
                                                     &:last-child {
                                                         font-size: 1rem;
                                                         color: #fff;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .swap-intro-footer-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .swap-intro-footer-cover-item {
+                                width: 650px;
+
+                                .footer-text-cover {
+                                    width: 100%;
+                                    padding-top: 25px;
+
+                                    .footer-title {
+                                        font-size: 3.2rem;
+                                        color: #fff;
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin-block-start: 0.3rem;
+                                        margin-block-end: 0.3rem;
+                                    }
+                                    .footer-subtitle {
+                                        font-size: 1rem;
+                                        color: rgba(245, 245, 245, 0.7);
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin-block-start: 0.8rem;
+                                        margin-block-end: 0.3rem;
+                                    }
+                                }
+                                .footer-btn-cover-flex {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    padding-top: 15px;
+
+                                    .footer-btn-cover-item {
+                                        width: 45%;
+
+                                        .footer-btn {
+                                            width: 100%;
+                                            height: 45px;
+                                            text-transform: none;
+                                            // background: #fa9f78;
+                                            background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                            border-radius: 10px;
+                                            color: #000;
+                                            transition: 0.2s ease-in all;
+
+                                            &:hover {
+                                                box-shadow: 0 0 12px #49e048;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Swap component styles
+                .swap-comp-cover-flex {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .swap-comp-cover-item {
+                        width: 100%;
+                        padding-top: 100px;                        
+
+                        .swap-intro-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .swap-intro-cover-item {
+                                width: 450px;
+                                border: 1px solid rgba(50, 50, 50, 0.8);
+                                border-radius: 15px;
+                                transition: 0.2s ease-in all;
+
+                                &:hover {
+                                    // border: 1px solid #49e048;
+                                    // cursor: pointer;
+                                }
+
+                                .swap-form-cover-flex {
+                                    width: 100%;
+
+                                    .swap-form-cover-item {
+
+                                        &:first-child {
+                                            height: 100px;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .section1-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section1-cover-item {
+                                                    width: 50%;
+                                                    
+                                                    &:first-child {
+
+                                                        .title-cover {
+
+                                                            .swap-title {
+                                                                font-size: 1.1rem;
+                                                                font-weight: 500;
+                                                                color: #fff;
+                                                            }
+                                                        }
+                                                    }
+                                                    &:last-child {
+                                                        display: flex;
+                                                        justify-content: flex-end;
+
+                                                        .connect-opt-cover-flex {
+                                                            width: 28%;
+                                                            display: flex;
+                                                            justify-content: space-between;
+
+                                                            .connect-opt-cover-item {
+                                                                width: calc(100/2);
+
+                                                                .icon-btn {
+                                                                    padding: 2px;
+
+                                                                    .btn-icon {
+                                                                        font-size: 1.3rem;
+                                                                        color: rgba(245, 245, 245, 0.7);
+                                                                        font-weight: 400;
+                                                                        transition: 0.2s ease-in all;
+    
+                                                                        &:hover {
+                                                                            color: #49e048;
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            height: 150px;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+                                            display: flex;
+                                            justify-content: center;
+                                            position: relative;
+
+                                            .swap-icon-cover {
+                                                position: absolute;
+                                                left: 45%;
+                                                bottom: -15px;
+                                                width: 35px;
+                                                height: 35px;
+                                                border: 1px solid rgba(50, 50, 50, 0.8);
+                                                border-radius: 5px;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                background: rgba(5, 10, 10, 8);
+
+                                                .swap-icon {
+                                                    font-size: 1.3rem;
+                                                    color: #fff;
+                                                }
+                                            }
+
+                                            .section2-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section2-cover-item {
+                                                    
+                                                    &:first-child {
+                                                        width: 35%;
+                                                        font-size: 1rem;
+                                                        color: #fff;
+                                                        display: flex;
+                                                        justify-content: flex-start;
+
+                                                        .currency-logo-cover-flex {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+
+                                                            .currency-logo-cover-item {
+                                                                width: 100%;
+
+                                                                &:first-child {
+
+                                                                    .select-curr-btn {
+                                                                        width: 80% !important;
+                                                                        font-size: 1rem;
+                                                                        color: #fff;
+                                                                        padding: 3px;
+                                                                        padding-left: 0px;
+                                                                        justify-content: flex-start;
+                                                                        text-transform: none;
+
+                                                                        &:hover {
+                                                                            background-color: transparent !important;
+                                                                        }
+
+                                                                        .btn-elems {
+                                                                            width: 80%;
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            align-items: center;
+
+                                                                            .logo {
+                                                                                width: 20px;
+                                                                                height: 20px;
+                                                                            }
+                                                                            .curr-name-span {
+                                                                                font-size: 0.9rem !important;
+                                                                            }
+                                                                            .expand-more-icon {
+                                                                                
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .address-bal-p {
+                                                                        font-size: 0.8rem;
+                                                                        color: rgba(150, 150, 150, 0.8);
+                                                                        font-weight: 400;
+                                                                        margin-block-start: 0.3rem;
+                                                                        margin-block-end: 0.3rem;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &:last-child {
+                                                        
+                                                        .crypto-amt-cover {
+
+                                                            .crypto-amt-input {
+                                                                border: none;
+                                                                direction: rtl;
+
+                                                                input {
+                                                                    font-size: 1.3rem;
+                                                                    color: #fff;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            height: 100px;
+                                            display: flex;
+                                            justify-content: center;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+
+                                            .section3-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section3-cover-item {
+                                                    
+                                                    &:first-child {
+                                                        width: 35%;
+                                                        font-size: 1rem;
+                                                        color: #fff;
+                                                        display: flex;
+                                                        justify-content: flex-start;
+
+                                                        .currency-logo-cover-flex {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+
+                                                            .currency-logo-cover-item {
+                                                                width: 100%;
+
+                                                                &:first-child {
+
+                                                                    .select-curr-btn {
+                                                                        width: 80% !important;
+                                                                        font-size: 1rem;
+                                                                        color: #fff;
+                                                                        padding: 3px;
+                                                                        padding-left: 0px;
+                                                                        justify-content: flex-start;
+                                                                        text-transform: none;
+
+                                                                        &:hover {
+                                                                            background-color: transparent !important;
+                                                                        }
+
+                                                                        .btn-elems {
+                                                                            width: 75%;
+                                                                            display: flex;
+                                                                            justify-content: space-between;
+                                                                            align-items: center;
+
+                                                                            .ques-icon {
+                                                                                font-size: 1rem !important;
+                                                                                color: #49e048;
+                                                                            }
+
+                                                                            .logo {
+                                                                                width: 20px;
+                                                                                height: 20px;
+                                                                            }
+                                                                            .curr-name-span {
+                                                                                font-size: 0.7rem !important;
+                                                                                color: rgba(150, 150, 150, 0.8) !important;
+                                                                            }
+                                                                            .expand-more-icon {
+                                                                                font-size: 1.2rem !important;
+                                                                                color: rgba(150, 150, 150, 0.8) !important;
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    .address-bal-p {
+                                                                        font-size: 0.8rem;
+                                                                        color: rgba(150, 150, 150, 0.8);
+                                                                        font-weight: 400;
+                                                                        margin-block-start: 0.3rem;
+                                                                        margin-block-end: 0.3rem;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &:last-child {
+                                                        
+                                                        .crypto-amt-cover {
+
+                                                            .crypto-amt-input {
+                                                                border: none;
+                                                                direction: rtl;
+
+                                                                input {
+                                                                    font-size: 1.3rem;
+                                                                    color: #fff;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:last-child {
+                                            // height: 100px;
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .section4-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: center;
+
+                                                .section4-cover-item {
+                                                    width: 100%;
+                                                    padding-top: 30px;
+
+                                                    .swap-btn-cover-flex {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+
+                                                        .swap-btn-cover-item {
+                                                            width: 90%;
+
+                                                            .swap-btn {
+                                                                width: 100%;
+                                                                height: 45px;
+                                                                text-transform: none;
+                                                                background-color: rgba(100, 100, 100, 0.5);
+                                                                color: rgba(245, 245, 245, 0.7);
+                                                                border-radius: 12px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .footer-text-cover-flex {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        padding-top: 10px;
+
+                                                        .footer-text-cover-item {
+                                                            width: 100%;
+
+                                                            .footer-text {
+                                                                text-align: center;
+
+                                                                .footer-text-link {
+                                                                    font-size: 0.8rem;
+                                                                    text-decoration: none;
+                                                                    color: #49e048;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        .swap-intro-footer-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .swap-intro-footer-cover-item {
+                                width: 650px;
+
+                                .footer-text-cover {
+                                    width: 100%;
+                                    padding-top: 25px;
+
+                                    .footer-title {
+                                        font-size: 3.2rem;
+                                        color: #fff;
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin-block-start: 0.3rem;
+                                        margin-block-end: 0.3rem;
+                                    }
+                                    .footer-subtitle {
+                                        font-size: 1rem;
+                                        color: rgba(245, 245, 245, 0.7);
+                                        font-weight: 400;
+                                        text-align: center;
+                                        margin-block-start: 0.8rem;
+                                        margin-block-end: 0.3rem;
+                                    }
+                                }
+                                .footer-btn-cover-flex {
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    padding-top: 15px;
+
+                                    .footer-btn-cover-item {
+                                        width: 45%;
+
+                                        .footer-btn {
+                                            width: 100%;
+                                            height: 45px;
+                                            text-transform: none;
+                                            // background: #fa9f78;
+                                            background: linear-gradient(285deg,#49e048 -5.49%,#6cf16b 46.02%,#98f797 62.08%,#baffb9 97.58%);
+                                            border-radius: 10px;
+                                            color: #000;
+                                            transition: 0.2s ease-in all;
+
+                                            &:hover {
+                                                box-shadow: 0 0 12px #49e048;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                // Swap coin list component styles
+                .swap-coin-list-comp-cover-flex {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+
+                    .swap-coin-list-comp-cover-item {
+                        width: 100%;
+                        padding-top: 100px;                        
+
+                        .swap-intro-cover-flex {
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                            .swap-intro-cover-item {
+                                width: 450px;
+                                border: 1px solid rgba(50, 50, 50, 0.8);
+                                border-radius: 15px;
+                                transition: 0.2s ease-in all;
+
+                                &:hover {
+                                    // border: 1px solid #49e048;
+                                    cursor: pointer;
+                                }
+
+                                .swap-form-cover-flex {
+                                    width: 100%;
+
+                                    .swap-form-cover-item {
+
+                                        &:first-child {
+                                            height: 100px;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .section1-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+
+                                                .section1-cover-item {
+                                                    
+                                                    &:first-child {
+                                                        width: 10%;
+
+                                                        .back-icon-cover {
+                                                            width: 100%;
+
+                                                            .icon-btn {
+                                                                width: 100%;
+
+                                                                .arrow-back-icon {
+                                                                    font-size: 0.9rem;
+                                                                    color: rgba(150, 150, 150, 0.8);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    &:last-child {
+                                                        width: 90%;
+                                                        display: flex;
+                                                        justify-content: center;
+
+                                                        .connect-opt-cover-flex {
+                                                            width: 100%;
+                                                            display: flex;
+                                                            justify-content: center;
+
+                                                            .connect-opt-cover-item {
+                                                                width: 50%;
+                                                                
+                                                                .select-text {
+                                                                    font-size: 1.1rem;
+                                                                    font-weight: 400;
+                                                                    color: #fff;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(2) {
+                                            width: 100%;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+                                            display: flex;
+                                            justify-content: center;
+                                            padding-bottom: 15px;
+
+                                            .section2-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                padding-top: 20px;
+
+                                                .section2-cover-item {
+                                                    width: 100%;
+
+                                                    .search-token-input-cover {
+                                                        width: 100%;
+
+                                                        .search-token-input {
+                                                            width: 100%;
+                                                            border: 1px solid rgba(50, 50, 50, 0.8);
+                                                            border-radius: 15px;
+                                                            background-color: rgba(10, 10, 10, 0.5);
+                                                            
+                                                            input {
+                                                                height: 20px;
+                                                                color: rgba(245, 245, 245, 0.7);
+                                                                border-radius: 15px;
+                                                            }
+
+                                                            .input-adornment {
+
+                                                                .search-icon {
+                                                                    color: rgba(50, 50, 50, 0.8);
+                                                                    font-size: 1.3rem;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                    .search-tokens-cover-flex {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        padding-top: 10px;
+
+                                                        .search-tokens-cover-item {
+                                                            width: 100%;
+
+                                                            .tokens-cover-flex {
+                                                                width: 100%;
+                                                                display: flex;
+                                                                flex-flow: row wrap;
+
+                                                                .tokens-cover-item {
+                                                                    width: 50px;
+                                                                    padding: 6px;
+                                                                    padding-right: 15px;
+                                                                    border-radius: 10px;
+                                                                    background-color: rgba(30, 30, 30, 0.4);
+                                                                    color: #fff;
+                                                                    margin-left: 10px;
+                                                                    margin-top: 10px;
+                                                                    text-align: right;
+                                                                    transition: 0.2s ease-in all;
+
+                                                                    &:hover {
+                                                                        background-color: rgba(50, 50, 50, 0.8);
+                                                                    }
+
+                                                                    &:first-child {
+                                                                        margin-left: 0px;
+                                                                    }
+
+                                                                    .token-logo {
+
+                                                                    }
+                                                                    .token-name {
+                                                                        font-size: 0.85rem;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:nth-child(3) {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: center;
+                                            border-bottom: 1px solid rgba(50, 50, 50, 0.8);
+
+                                            .section3-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: center;
+
+                                                .section3-cover-item {
+                                                    width: 100%;
+
+                                                    .list-tokens-cover-flex {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+
+                                                        .list-tokens-cover-item {
+                                                            width: 100%;
+                                                            padding-top: 5px;
+
+                                                            .tokens-balance-cover-flex {
+                                                                width: 100%;
+                                                                display: flex;
+                                                                flex-direction: column;
+
+                                                                .tokens-balance-cover-item {
+                                                                    width: 100%;
+                                                                    padding-top: 20px;
+                                                                    padding-bottom: 30px;
+
+                                                                    .tokens-balance-content-cover-flex {
+                                                                        width: 100%;
+                                                                        display: flex;
+                                                                        justify-content: space-between;
+
+                                                                        .tokens-balance-content-cover-item {
+                                                                            width: 50%;
+                                                                            font-size: 1rem;
+                                                                            font-weight: 400;
+                                                                            color: rgba(200, 200, 200, 0.8);
+
+                                                                            &:first-child {
+
+                                                                                .token-logo {
+
+                                                                                }
+                                                                                .token-name {
+    
+                                                                                }
+                                                                            }
+                                                                            &:last-child {
+                                                                                text-align: right;
+
+                                                                                .token-balance {
+                                                                                    font-size: 1.1rem !important;
+                                                                                    color: #fff !important;
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        &:last-child {
+                                            // height: 100px;
+                                            display: flex;
+                                            justify-content: center;
+
+                                            .section4-cover-flex {
+                                                width: 90%;
+                                                display: flex;
+                                                justify-content: center;
+
+                                                .section4-cover-item {
+                                                    width: 100%;
+                                                    padding-top: 30px;
+
+                                                    .swap-btn-cover-flex {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+
+                                                        .swap-btn-cover-item {
+                                                            width: 90%;
+
+                                                            .swap-btn {
+                                                                width: 100%;
+                                                                height: 45px;
+                                                                text-transform: none;
+                                                                background-color: rgba(100, 100, 100, 0.5);
+                                                                color: rgba(245, 245, 245, 0.7);
+                                                                border-radius: 12px;
+                                                            }
+                                                        }
+                                                    }
+                                                    .footer-text-cover-flex {
+                                                        width: 100%;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        padding-top: 10px;
+
+                                                        .footer-text-cover-item {
+                                                            width: 100%;
+
+                                                            .footer-text {
+                                                                text-align: center;
+
+                                                                .footer-text-link {
+                                                                    font-size: 0.8rem;
+                                                                    text-decoration: none;
+                                                                    color: #49e048;
+                                                                }
+                                                            }
+                                                        }
                                                     }
                                                 }
                                             }
